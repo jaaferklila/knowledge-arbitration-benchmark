@@ -39,8 +39,8 @@ pip install -r requirements.txt
 🚀 3. Run Evaluation
 
 ### Option 1 — Python script (recommended GPU usage)
+open  knowledge-arbitration-benchmark/scripts/evaluate_absence_no_context
 ```bash
-cd scripts/evaluate_absence_no_context
 python run_absence_parametric_eval.py \
   --model_name llama3.1-8b \
   --dataset_name synthetic_absence_dataset
@@ -76,6 +76,7 @@ It provides:
 
 ## 🔹 Knowledge Arbitration under External Knowledge Availability
 🚀 3. Run Evaluation
+open  knowledge-arbitration-benchmark/scripts/evaluate_absence_rag
 ```bash
 cd scripts/evaluate_absence_rag
 python evaluate_absence_rag.py \
@@ -85,14 +86,15 @@ python evaluate_absence_rag.py \
 
 ## 🔹 RQ2: Do models override parametric 503 knowledge under conflict? 
 🚀 3. Run Evaluation
+open  knowledge-arbitration-benchmark/scripts/evaluate_conflict
 ```bash
-python evaluate_conflict/conflict.py
+python conflict.py --model_name llama3.1-8b \
 ```
 ## 🔹 RQ3: Can models integrate  complementary knowledge? 
 🚀 3. Run Evaluation
+open  knowledge-arbitration-benchmark/scripts/evaluate_complementary
 ```bash
-cd scripts/evaluate_complementary
-python complementary.py
+python complementary.py --model_name llama3.1-8b \
 
 ```
 
