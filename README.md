@@ -76,7 +76,8 @@ It provides:
 
 ## 🔹 Knowledge Arbitration under External Knowledge Availability
 🚀 3. Run Evaluation
-open  knowledge-arbitration-benchmark/scripts/evaluate_absence_rag
+- open : 
+knowledge-arbitration-benchmark/scripts/evaluate_absence_rag
 ```bash
 cd scripts/evaluate_absence_rag
 python evaluate_absence_rag.py \
@@ -86,13 +87,15 @@ python evaluate_absence_rag.py \
 
 ## 🔹 RQ2: Do models override parametric 503 knowledge under conflict? 
 🚀 3. Run Evaluation
-open  knowledge-arbitration-benchmark/scripts/evaluate_conflict
+- open :  
+ knowledge-arbitration-benchmark/scripts/evaluate_conflict
 ```bash
 python conflict.py --model_name llama3.1-8b \
 ```
 ## 🔹 RQ3: Can models integrate  complementary knowledge? 
 🚀 3. Run Evaluation
-open  knowledge-arbitration-benchmark/scripts/evaluate_complementary
+- open :
+  knowledge-arbitration-benchmark/scripts/evaluate_complementary
 ```bash
 python complementary.py --model_name llama3.1-8b \
 
