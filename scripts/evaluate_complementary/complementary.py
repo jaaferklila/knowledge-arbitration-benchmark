@@ -37,24 +37,21 @@ args = parser.parse_args()
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 device
 
-contriever = AutoModel.from_pretrained('../../contriever-msmarco').cuda()
-tokenizer = AutoTokenizer.from_pretrained('../../contriever-msmarco')
+contriever = AutoModel.from_pretrained('../contriever-msmarco').cuda()
+tokenizer = AutoTokenizer.from_pretrained('../contriever-msmarco')
 #model_name ="llama3.1-8b"
 model_name = args.model_name
 
 MODEL_NAME_TO_PATH = {
-    "llama3.1-8b": "/home/users/jklila/.cache/huggingface/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659",
-    "qwen2.5-7b": "/home/users/jklila/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
-    "qwen2.5-14b": "/home/users/jklila/.cache/huggingface/hub/models--Qwen--Qwen2.5-14B-Instruct/snapshots/cf98f3b3bbb457ad9e2bb7baf9a0125b6b88caa8",
-   "qwen2.5-32b": "/home/users/jklila/.cache/huggingface/hub/models--Qwen--Qwen2.5-32B-Instruct/snapshots/5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
-    #"llama-3.1-70B": "/home/users/jklila/.cache/huggingface/hub/models--meta-llama--Llama-3.1-70B-Instruct/snapshots/1605565b47bb9346c5515c34102e054115b4f98b",
-    "mistral-7B":"/home/users/jklila/.cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.3/snapshots/c170c708c41dac9275d15a8fff4eca08d52bab71",
-    "mixtral-8x7B":"/home/data/dataset/huggingface/LLMs/mistralai/Mixtral-8x7B-Instruct-v0.1",
-    "deepseek-7b":"/home/users/jklila/.cache/huggingface/hub/models--deepseek-ai--deepseek-llm-7b-chat/snapshots/afbda8b347ec881666061fa67447046fc5164ec8",
-       "Qwen3-30B":"/home/data/dataset/huggingface/LLMs/Qwen/Qwen3-30B-A3B-Instruct-2507",
-        "Qwen3-4B":"/home/data/dataset/huggingface/LLMs/Qwen/Qwen3-4B-Instruct-2507",
-        
-       
+    "llama3.1-8b": "meta-llama/Llama-3.1-8B-Instruct",
+    "qwen2.5-7b": "Qwen/Qwen2.5-7B-Instruct",
+    "qwen2.5-14b": "Qwen/Qwen2.5-14B-Instruct",
+    "qwen2.5-32b": "Qwen/Qwen2.5-32B-Instruct",
+    "mistral-7B": "mistralai/Mistral-7B-Instruct-v0.3",
+    "mixtral-8x7B": "mistralai/Mixtral-8x7B-Instruct-v0.1",
+    "deepseek-7b": "deepseek-ai/deepseek-llm-7b-chat",
+    "Qwen3-30B": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "Qwen3-4B": "Qwen/Qwen3-4B-Instruct-2507",
 }
 
 model_path = MODEL_NAME_TO_PATH[model_name]
@@ -124,7 +121,7 @@ rag_template = select_rag_template(model_name,rag_template_llama,rag_template_mi
 
 
 
-with open("complementary_data.json", "r", encoding="utf-8") as f:
+with open("../datasets/complementary_dataset.json.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 output_path = "complementary_resultas/"

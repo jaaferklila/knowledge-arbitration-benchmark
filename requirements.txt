@@ -1,0 +1,14 @@
+torch
+transformers
+accelerate
+numpy
+tqdm
+tokenizers
+safetensors
+sentencepiece
+huggingface-hub
+protobuf
+requests
+datasets
+pandas
+scikit-learn
