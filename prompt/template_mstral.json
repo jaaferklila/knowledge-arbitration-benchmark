@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "You are a helpful assistant for question-answering tasks.\nAnswer with only the final answer."
+  },
+  {
+    "role": "assistant",
+    "content": "OK."
+  }
+]

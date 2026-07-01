@@ -1,0 +1,32 @@
+[
+  {
+    "role": "system",
+    "content":"Determine whether the provided sentence is relevant to answering the Question.\nA sentence is relevant if it contains information that could be used as a candidate answer to the question.\nA sentence is relevant ONLY if it directly provides the answer to the question.\nThe sentence must refer to the same entity or topic AND express the same type of relation asked in the question.\nIf the sentence does not directly answer the question, answer No.\nOutput ONLY Yes or No.\nDo NOT explain."
+ 
+  },
+  {
+    "role": "user",
+    "content": "Sentence: Paris is the capital of France.\nQuestion: What is the capital of France?"
+  },
+  {"role": "assistant", "content": "Yes"},
+  {
+    "role": "user",
+    "content": "Sentence: Tunisia is a country in North Africa.\nQuestion: What is the capital of France?"
+  },
+  {"role": "assistant", "content": "No"},
+  {
+    "role": "user",
+    "content": "Sentence: Sami Alnourien is a citizen of Doriamir.\nQuestion: What is the country of citizenship of Sami Alnourien?"
+  },
+  {"role": "assistant", "content": "Yes"},
+  {
+    "role": "user",
+    "content": "Sentence:  Frederic Djabou is the president of USA.\nQuestion: Who is the president of USA?"
+  },
+  {"role": "assistant", "content": "Yes"},
+  {
+    "role": "user",
+    "content": "Sentence: Sami Alnourien is a citizen of Doriamir.\nQuestion: Who is the president of France?"
+  },
+  {"role": "assistant", "content": "No"}
+]
